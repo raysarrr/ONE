@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="ru"><head>
+  <meta charset="utf-8">
+  <title>Помидоры</title>
+        <style>
+            nav ul {
+                list-style-type: none;
+                padding: 0;
+            }
+
+            nav ul li {
+                display: inline;
+                margin-right: 10px;
+            }
+
+            nav ul li a {
+                text-decoration: none;
+                padding: 10px;
+                border: 2px solid red;
+                border-radius: 5px;
+                color: black;
+                background-color: white;
+            }
+
+            nav ul li a.active {
+                background-color: red;
+                color: white;
+            }
+
+            nav ul li a:hover {
+                background-color: red;
+                color: white;
+            }
+
+            body {
+                font-family: Arial, sans-serif;
+                line-height: 1.5;
+            }
+        </style>
+    </head>
+    <body>
+        <nav>
+         <ul>
+             <li>
+                 <a href="index.html">Главная страница</a>
+             </li>
+             <li>
+               <a href="page1.html" class="active">Основное</a> 
+             </li>
+             <li>
+                 <a href="page2.html">Разновидности</a>
+             </li>
+             <li>
+                 <a href="page3.html">Почему помидоры лучше огурцов</a>
+             </li>
+             <li>
+                 <a href="page4.html">Покупки</a>
+             </li>
+             <li>
+                 <a href="https://ru.wikipedia.org/wiki/%D0%A2%D0%BE%D0%BC%D0%B0%D1%82" target="_blank">Узнать больше</a>
+             </li>
+         </ul>   
+        </nav>
+        <h1 align="center">Основное о помидорах</h1>
+        <table align="center" cellspacing="0" cellpadding="10" border="1" width="700px" background="https://img.freepik.com/premium-vector/white-background-with-dark-gray-texture-text-space_664601-2468.jpg">
+            <thead>
+                <tr>
+                    <th>Витамины</th>
+                    <th>Интересные факты</th>
+                    <th>Использование</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>
+                        E
+                    </td>
+                    <td>
+                        Помидоры содержат гормон счастья и являются антидепрессантом.
+                    </td>
+                    <td>
+                        Древние ацтеки использовали помидоры в медицине.
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        С
+                    </td>
+                    <td>
+                        Помидоры на 95% состоят из воды.
+                    </td>
+                    <td>
+                        В Европе какое-то время использовались как декоративные растения.
+                    </td>
+                </tr>
+                <tr><td>
+                    B4
+                </td>
+                <td>
+                    Долгое время помидоры считались несъедобными и даже ядовитыми.
+                </td>
+                <td>
+                    Являются ингредиентом множества блюд в большинстве кухонь мира.
+                </td>
+            </tr>
+            </tbody>
+</table>
+<script>
+    const currentLocation = location.href;
+
+    const menuItem = document.querySelectorAll('nav ul li a');
+
+    menuItem.forEach(item => {
+        if (item.href === currentLocation) {
+            item.classList.add('active');
+        }
+    });
+</script></body></html>
