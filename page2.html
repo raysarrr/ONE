@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Помидоры - Разновидности</title>
+    <style>
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        nav ul li {
+            display: inline;
+            margin-right: 10px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            padding: 10px;
+            border: 2px solid red;
+            border-radius: 5px;
+            color: black;
+            background-color: white;
+        }
+
+        nav ul li a.active {
+            background-color: red;  
+            color: white;            
+        }
+
+        nav ul li a:hover {
+            background-color: red;
+            color: white;
+        }
+        
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.5;
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <ul>
+            <li><a href="index.html">Главная страница</a></li>
+            <li><a href="page1.html">Основное</a></li>
+            <li><a href="page2.html">Разновидности</a></li>
+            <li><a href="page3.html">Почему помидоры лучше огруцов</a></li>
+            <li><a href="page4.html">Покупки</a></li>
+            <li><a href="https://ru.wikipedia.org/wiki/%D0%A2%D0%BE%D0%BC%D0%B0%D1%82" target="_blank">Узнать больше</a></li>
+        </ul>
+    </nav>
+
+    <h1>Разновидности</h1>
+    <p>
+        <h3>Черри</h3>
+        <img
+      src="https://cdn-img.perekrestok.ru/i/800x800-fit/xdelivery/files/d7/93/459ab5e985db99872945134ae98d.jpgp"
+      alt="Черри"
+      width="600"
+      height="400" 
+      title="Черри"/>
+    </p>
+    <p>
+        <h3>Сливка</h3>
+        <img
+      src="https://vkustorg.com/image/cache/Ovochi_frukty/1e2c9ea017205514df0bb03ebd5d1b50-1000x1000.jpeg"
+      alt=Сливка
+      width="600"
+      height="400" 
+      title="Сливка"/>
+    </p>
+    <p>
+        <h3>Фламенко</h3>
+        <img
+      src="https://irecommend.ru/sites/default/files/product-images/138315/DUbccXZK5iY5T0wlJiSZw.png"
+      alt="Фламенко"
+      width="600"
+      height="400" 
+      title="Фламенко"/>
+    </p>
+
+    <script>
+
+        const currentLocation = location.href;
+
+        const menuItem = document.querySelectorAll('nav ul li a');
+
+        menuItem.forEach(item => {
+            if (item.href === currentLocation) {
+                item.classList.add('active'); 
+            }
+        });
+    </script>
+</body>
+</html>
