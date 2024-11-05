@@ -45,7 +45,7 @@
             font-family: Arial, sans-serif;
         }
         body {
-            background-image: https://i.pinimg.com/736x/64/b2/a2/64b2a25a3e9178140fccb0f4fa0d4511.jpg;
+            background-image: url("https://i.pinimg.com/736x/64/b2/a2/64b2a25a3e9178140fccb0f4fa0d4511.jpg"); /* Changed to url() */
             background-position: center-bottom; 
             background-repeat: no-repeat;
         }
@@ -126,29 +126,24 @@
             ОБЛАСТИ </div>
     <div class="block2"> 27.05.2005</div>
     <div class="block3"> 000-000</div>
-    <div class="block4"> САРАТОВА </div>
-    <div class="block5"> РАЯНА </div>
-    <div class="block6"> РАМЗАНОВНА </div>
-    <div class="block7"> ЖЕН. </div>
-    <div class="block8"> 27.05.2005       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </div>
-    <div class="block9"> ГОР. САНКТ-ПЕТЕРБУРГ <br>
+    <div class="block4" id="saratova">САРАТОВА</div>
+    <div class="block5" id="rayana">РАЯНА</div>
+    <div class="block6" id="ramzanova">РАМЗАНОВНА</div>
+    <div class="block7">ЖЕН.</div>
+    <div class="block8">27.05.2005       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </div>
+    <div class="block9">ГОР. САНКТ-ПЕТЕРБУРГ <br>
             РОССИЯ</div>
     <div class="photo"> <img src="https://m.dom-eda.com/uploads/images/catalog/item/c6ebcf64ba/e87b941b85_500.jpg" height="148" width="118"/> </div>
 
-    <div class="block10"> <button id ='change'> Перевести </button> </div>
-    <div class="block11">Изменить кириллицу на латиницу<br>
+    <div class="block10"> <button id="change">Перевести</button> </div>
+    <div class="block11">Изменить кириллицу на латиницу</div>
 
-        <script>
-     
-            const currentLocation = location.href;
-    
-            const menuItem = document.querySelectorAll('nav ul li a');
-    
-            menuItem.forEach(item => {
-                if (item.href === currentLocation) {
-                    item.classList.add('active'); 
-                }
-            });
-        </script>
+    <script>
+        document.getElementById('change').addEventListener('click', function() {
+            document.getElementById('saratova').textContent = 'SARATOVA';
+            document.getElementById('rayana').textContent = 'RAYANA';
+            document.getElementById('ramzanova').textContent = 'RAMZANOVNA';
+        });
+    </script>
 </body>
 </html>
